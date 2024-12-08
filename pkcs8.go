@@ -22,8 +22,6 @@ var (
 	oidNamedCurveP384 = asn1.ObjectIdentifier{1, 3, 132, 0, 34}
 	oidNamedCurveP521 = asn1.ObjectIdentifier{1, 3, 132, 0, 35}
 
-	oidBrainpoolP224r1 = asn1.ObjectIdentifier{1, 3, 36, 3, 3, 2, 1, 1, 5}
-	oidBrainpoolP224t1 = asn1.ObjectIdentifier{1, 3, 36, 3, 3, 2, 1, 1, 6}
 	oidBrainpoolP256r1 = asn1.ObjectIdentifier{1, 3, 36, 3, 3, 2, 1, 1, 7}
 	oidBrainpoolP256t1 = asn1.ObjectIdentifier{1, 3, 36, 3, 3, 2, 1, 1, 8}
 	oidBrainpoolP384r1 = asn1.ObjectIdentifier{1, 3, 36, 3, 3, 2, 1, 1, 11}
@@ -38,8 +36,6 @@ func init() {
 	AddNamedCurve(elliptic.P384(), oidNamedCurveP384)
 	AddNamedCurve(elliptic.P521(), oidNamedCurveP521)
 
-	AddNamedCurve(brainpool.P224r1(), oidBrainpoolP224r1)
-	AddNamedCurve(brainpool.P224t1(), oidBrainpoolP224t1)
 	AddNamedCurve(brainpool.P256r1(), oidBrainpoolP256r1)
 	AddNamedCurve(brainpool.P256t1(), oidBrainpoolP256t1)
 	AddNamedCurve(brainpool.P384r1(), oidBrainpoolP384r1)
