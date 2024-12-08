@@ -74,7 +74,7 @@ type ecPrivateKey struct {
 	PublicKey     asn1.BitString        `asn1:"optional,explicit,tag:1"`
 }
 
-// 包装公钥
+// Wrap Public Key
 func MarshalPublicKey(pub *PublicKey) ([]byte, error) {
 	var publicKeyBytes []byte
 	var publicKeyAlgorithm pkix.AlgorithmIdentifier
@@ -111,7 +111,7 @@ func MarshalPublicKey(pub *PublicKey) ([]byte, error) {
 	return asn1.Marshal(pkix)
 }
 
-// 解析公钥
+// Parse Public Key
 func ParsePublicKey(derBytes []byte) (pub *PublicKey, err error) {
 	var pki publicKeyInfo
 	rest, err := asn1.Unmarshal(derBytes, &pki)
@@ -168,7 +168,7 @@ func ParsePublicKey(derBytes []byte) (pub *PublicKey, err error) {
 
 // ====================
 
-// 包装私钥
+// Wrap Private Key
 func MarshalPrivateKey(key *PrivateKey) ([]byte, error) {
 	var privKey pkcs8
 
@@ -198,7 +198,7 @@ func MarshalPrivateKey(key *PrivateKey) ([]byte, error) {
 	return asn1.Marshal(privKey)
 }
 
-// 解析私钥
+// Parse Private Key
 func ParsePrivateKey(derBytes []byte) (*PrivateKey, error) {
 	var privKey pkcs8
 	var err error
