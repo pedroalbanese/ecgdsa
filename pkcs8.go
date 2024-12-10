@@ -9,6 +9,7 @@ import (
 	"math/big"
 
 	"github.com/pedroalbanese/brainpool"
+	"github.com/pedroalbanese/frp256v1"
 	"golang.org/x/crypto/cryptobyte"
 )
 
@@ -28,6 +29,8 @@ var (
 	oidBrainpoolP384t1 = asn1.ObjectIdentifier{1, 3, 36, 3, 3, 2, 1, 1, 12}
 	oidBrainpoolP512r1 = asn1.ObjectIdentifier{1, 3, 36, 3, 3, 2, 1, 1, 13}
 	oidBrainpoolP512t1 = asn1.ObjectIdentifier{1, 3, 36, 3, 3, 2, 1, 1, 14}
+
+	oidANSSIFRP256v1 = asn1.ObjectIdentifier{1, 2, 250, 1, 223, 101, 256, 1}
 )
 
 func init() {
@@ -42,6 +45,8 @@ func init() {
 	AddNamedCurve(brainpool.P384t1(), oidBrainpoolP384t1)
 	AddNamedCurve(brainpool.P512r1(), oidBrainpoolP512r1)
 	AddNamedCurve(brainpool.P512t1(), oidBrainpoolP512t1)
+
+	AddNamedCurve(frp256v1.P256(), oidANSSIFRP256v1)
 }
 
 // Private Key - Wrapping
