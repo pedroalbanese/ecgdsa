@@ -11,7 +11,7 @@ import (
 	"github.com/pedroalbanese/brainpool"
 	"github.com/pedroalbanese/frp256v1"
 	"github.com/pedroalbanese/go-nums"
-	"github.com/pedroalbanese/kg"
+	"github.com/pedroalbanese/tom"
 	"github.com/pedroalbanese/secp256k1"
 	"golang.org/x/crypto/cryptobyte"
 )
