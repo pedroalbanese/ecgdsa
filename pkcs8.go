@@ -13,7 +13,7 @@ import (
 	"github.com/pedroalbanese/go-nums"
 	"github.com/pedroalbanese/tom"
 	"github.com/pedroalbanese/secp256k1"
-	"github.com/RyuaNerin/elliptic2"
+	"github.com/RyuaNerin/elliptic2/nist"
 	"golang.org/x/crypto/cryptobyte"
 )
 
