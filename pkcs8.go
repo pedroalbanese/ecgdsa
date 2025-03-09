@@ -13,6 +13,7 @@ import (
 	"github.com/pedroalbanese/go-nums"
 	"github.com/pedroalbanese/tom"
 	"github.com/pedroalbanese/secp256k1"
+	"github.com/RyuaNerin/elliptic2"
 	"golang.org/x/crypto/cryptobyte"
 )
 
@@ -45,6 +46,13 @@ var (
 
 	oidTom256 = asn1.ObjectIdentifier{1, 2, 999, 1, 1, 1, 1}
 	oidTom384 = asn1.ObjectIdentifier{1, 2, 999, 1, 1, 1, 2}
+	
+	oidSect283k1 = asn1.ObjectIdentifier{1, 3, 132, 0, 16}
+	oidSect283r1 = asn1.ObjectIdentifier{1, 3, 132, 0, 17}
+	oidSect409k1 = asn1.ObjectIdentifier{1, 3, 132, 0, 36}
+	oidSect409r1 = asn1.ObjectIdentifier{1, 3, 132, 0, 37}
+	oidSect571k1 = asn1.ObjectIdentifier{1, 3, 132, 0, 38}
+	oidSect571r1 = asn1.ObjectIdentifier{1, 3, 132, 0, 39}
 )
 
 func init() {
@@ -72,6 +80,13 @@ func init() {
 	
 	AddNamedCurve(tom.P256(), oidTom256)
 	AddNamedCurve(tom.P384(), oidTom384)
+
+	AddNamedCurve(nist.K283(), oidSect283k1)
+	AddNamedCurve(nist.B283(), oidSect283r1)
+	AddNamedCurve(nist.K409(), oidSect409k1)
+	AddNamedCurve(nist.B409(), oidSect409r1)
+	AddNamedCurve(nist.K571(), oidSect571k1)
+	AddNamedCurve(nist.B571(), oidSect571r1)
 }
 
 // Private Key - Wrapping
